@@ -4,15 +4,21 @@ export const Statistics = ({ statistic: { label, percentage } }) => {
   return (
     <Item>
       <StatFileTipe> {label} </StatFileTipe>
-      <StatFileTipe> {percentage} </StatFileTipe>
+      <StatFileTipe fontSize={24}> {percentage} </StatFileTipe>
     </Item>
   );
 };
 
 Statistics.propTypes = {
   statistic: PropTypes.exact({
-    id: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
     percentage: PropTypes.number.isRequired,
   }).isRequired,
 };
+
+export function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
+}

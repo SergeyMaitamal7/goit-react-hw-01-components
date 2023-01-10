@@ -4,18 +4,19 @@ export const Item = styled.li`
   display: flex;
   flex-direction: row;
   align-items: center;
-  outline: 10px gold;
-  width: 240px;
+  width: 460px;
+
   margin-left: auto;
   margin-right: auto;
-  background-color: brown;
+  padding: 10px;
+  border: 1px solid gray;
+  background-color: lightblue;
 `;
 export const Status = styled.span`
   width: 20px;
   height: 20px;
   border-radius: 10px;
   background-color: ${props => {
-    console.log(props.isOnline);
     if (props.isOnline === true) return 'green';
     return 'red';
   }};
@@ -23,8 +24,7 @@ export const Status = styled.span`
 export const Avatar = styled.img`
   display: block;
   margin-left: 10px;
-  width: 120px;
-  background-color: green;
+  width: 200px;
 `;
 export const Name = styled.p`
   display: flex;
@@ -32,5 +32,5 @@ export const Name = styled.p`
   margin-right: auto;
   align-items: center;
   justify-content: left;
-  background-color: chocolate;
+  font-size: 24px;
 `;

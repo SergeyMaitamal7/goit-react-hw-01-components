@@ -6,7 +6,6 @@ export const Section = styled.div`
   width: 480px;
   margin-left: auto;
   margin-right: auto;
-  background-color: silver;
 `;
 export const List = styled.ul`
   display: flex;

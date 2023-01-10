@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Container, ucFirst } from './Profile.stiled';
 import {
   Avatar,
   Description,
@@ -13,22 +14,24 @@ export const Profile = ({ profile }) => {
     <ProfileContainer>
       <Description>
         <Avatar src={profile.avatar} alt={profile.username} />
-        <PersonalInfo>{profile.username}</PersonalInfo>
-        <PersonalInfo>{profile.tag}</PersonalInfo>
+        <PersonalInfo color={1}>{ucFirst(profile.username)}</PersonalInfo>
+        <PersonalInfo> {profile.tag}</PersonalInfo>
         <PersonalInfo>{profile.location}</PersonalInfo>
       </Description>
       <Stats>
         <StatsItem>
-          <SociaNetworcStats>followers</SociaNetworcStats>
-          <SociaNetworcStats>{profile.stats.followers}</SociaNetworcStats>
+          <SociaNetworcStats>Followers</SociaNetworcStats>
+          <SociaNetworcStats color={1}>
+            {profile.stats.followers}
+          </SociaNetworcStats>
         </StatsItem>
         <StatsItem>
-          <SociaNetworcStats>views</SociaNetworcStats>
-          <SociaNetworcStats>{profile.stats.views}</SociaNetworcStats>
+          <SociaNetworcStats>Views</SociaNetworcStats>
+          <SociaNetworcStats color={1}>{profile.stats.views}</SociaNetworcStats>
         </StatsItem>
         <StatsItem>
-          <SociaNetworcStats>likes</SociaNetworcStats>
-          <SociaNetworcStats>{profile.stats.likes}</SociaNetworcStats>
+          <SociaNetworcStats>Likes</SociaNetworcStats>
+          <SociaNetworcStats color={1}>{profile.stats.likes}</SociaNetworcStats>
         </StatsItem>
       </Stats>
     </ProfileContainer>

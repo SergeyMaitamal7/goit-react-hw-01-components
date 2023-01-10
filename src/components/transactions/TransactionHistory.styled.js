@@ -6,5 +6,6 @@ export const TransactionTable = styled.table`
   width: 480px;
   margin-left: auto;
   margin-right: auto;
-  background-color: gold;
+  margin-bottom: 16px;
+  border-bottom: 1px solid gray;
 `;

@@ -2,23 +2,29 @@ import styled from 'styled-components';
 
 export const ProfileContainer = styled.div`
   display: block;
-  background-color: royalblue;
-`;
-
-export const Description = styled.div`
-  display: block;
   width: 768px;
   margin-left: auto;
   margin-right: auto;
-  color: orange;
-  background-color: yellow;
+  background-color: grey;
 `;
-export const Avatar = styled.img`
+export const Description = styled.div`
   display: block;
   width: 480px;
   margin-left: auto;
   margin-right: auto;
-  background-color: gray;
+  padding-bottom: 10px;
+  border: 1px solid gray;
+  color: black;
+  background-color: white;
+`;
+
+export const Avatar = styled.img`
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  width: 480px;
+  border-radius: 50%;
 `;
 
 export const PersonalInfo = styled.p`
@@ -26,28 +32,51 @@ export const PersonalInfo = styled.p`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: red;
+  font-size: ${props => {
+     if (props.color === 1) return '24px';
+    return '16px';
+  }};
+  font-weight: 700;
+  color: ${props => {
+    if (props.color === 1) return 'black';
+    return 'grey';
+  }};
 `;
 export const Stats = styled.ul`
   display: flex;
   flex-direction: row;
   width: 480px;
   padding-left: 0;
+  margin: 0;
   margin-left: auto;
   margin-right: auto;
+  border: 1px solid gray;
   color: red;
-  background-color: brown;
+  background-color: lightgrey; ;
 `;
 export const StatsItem = styled.span`
   display: flex;
+  flex-direction: column;
   margin-left: auto;
   margin-right: auto;
-  padding: 12px;
-  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-weight: 700;
+  border: 1px solid gray;
 `;
 export const SociaNetworcStats = styled.span`
-  padding: 6px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 158px;
+  padding-bottom: 10px;
+  font-size: 16px;
+  color: ${props => {
+    if (props.color === 1) return 'black';
+    return 'grey';
+  }};
 `;
+export function ucFirst(str) {
+  if (!str) return str;
+  return str[0].toUpperCase() + str.slice(1);
+}

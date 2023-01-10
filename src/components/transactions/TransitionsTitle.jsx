@@ -12,8 +12,9 @@ export const TransactionTitle = ({ tipeT, amountT, currencyT }) => {
   );
 };
 
-// TransactionTitle.propTypes = {
-//   typeT: PropTypes.string.isRequired,
-//   amountT: PropTypes.string.isRequired,
-//   currencyT: PropTypes.string.isRequired,
-// };
+TransactionTitle.propTypes = {
+  typeT: PropTypes.string.isRequired,
+  amountT: PropTypes.string.isRequired,
+  currencyT: PropTypes.string.isRequired,
+};
+

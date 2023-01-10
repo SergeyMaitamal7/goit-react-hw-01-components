@@ -6,10 +6,10 @@ import { List, Section } from './StatisticsList.styled';
 export const StatisticsList = ({ statistics }) => {
   return (
     <Section>
-      <PageTitle text="Upload stats" />
+      <PageTitle text={UpperCase("Upload stats")} />
       <List>
         {statistics.map(statistic => (
-          <Statistics key={statistic.id} statistic={statistic} />
+          <Statistics   key={statistic.id} statistic={statistic} />
         ))}
       </List>
     </Section>
@@ -23,3 +23,9 @@ StatisticsList.propTypes = {
     })
   ).isRequired,
 };
+
+export function UpperCase(str) {
+  if (!str) return str;
+
+  return str.toUpperCase();
+}
