@@ -26,6 +26,5 @@ StatisticsList.propTypes = {
 
 export function UpperCase(str) {
   if (!str) return str;
-
   return str.toUpperCase();
 }

@@ -6,10 +6,7 @@ import { Profile } from '../profile/Profile';
 import { StatisticsList } from '../statistics/StatisticsList';
 import { FriendList } from '../friends/FriendList';
 import { TransactionHistory } from '../transactions/TransactionHistory';
-console.log(profile);
-console.log(statistics);
-console.log(friends);
-console.log(transactions);
+
 export const App = () => {
   return (
     <>

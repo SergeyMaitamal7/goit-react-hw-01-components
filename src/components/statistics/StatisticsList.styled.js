@@ -11,6 +11,7 @@ export const List = styled.ul`
   display: flex;
   flex-direction: row;
   padding: 0;
+  margin: 0;
   width: 480px;
   background-color: orange;
 `;

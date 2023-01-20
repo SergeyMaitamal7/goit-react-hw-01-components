@@ -5,17 +5,17 @@ export const Item = styled.li`
   flex-direction: row;
   align-items: center;
   width: 460px;
-
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
+  margin-bottom: 10px;
   border: 1px solid gray;
   background-color: lightblue;
 `;
 export const Status = styled.span`
   width: 20px;
   height: 20px;
-  border-radius: 10px;
+  border-radius: 15px;
   background-color: ${props => {
     if (props.isOnline === true) return 'green';
     return 'red';

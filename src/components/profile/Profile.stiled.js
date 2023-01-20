@@ -1,11 +1,6 @@
 import styled from 'styled-components';
 
 export const ProfileContainer = styled.div`
-  display: block;
-  width: 768px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: grey;
 `;
 export const Description = styled.div`
   display: block;
@@ -14,16 +9,15 @@ export const Description = styled.div`
   margin-right: auto;
   padding-bottom: 10px;
   border: 1px solid gray;
-  color: black;
-  background-color: white;
+  background-color: aqua;
 `;
 
 export const Avatar = styled.img`
   display: block;
   margin-left: auto;
   margin-right: auto;
-  background-color: white;
-  width: 480px;
+  width: 400px;
+  background-color: yellow;
   border-radius: 50%;
 `;
 
@@ -33,8 +27,8 @@ export const PersonalInfo = styled.p`
   align-items: center;
   justify-content: center;
   font-size: ${props => {
-     if (props.color === 1) return '24px';
-    return '16px';
+    if (props.color === 1) return '36px';
+    return '24px';
   }};
   font-weight: 700;
   color: ${props => {
@@ -51,8 +45,7 @@ export const Stats = styled.ul`
   margin-left: auto;
   margin-right: auto;
   border: 1px solid gray;
-  color: red;
-  background-color: lightgrey; ;
+  background-color: aquamarine; ;
 `;
 export const StatsItem = styled.span`
   display: flex;
@@ -70,7 +63,7 @@ export const SociaNetworcStats = styled.span`
   align-items: center;
   width: 158px;
   padding-bottom: 10px;
-  font-size: 16px;
+  font-size: 24px;
   color: ${props => {
     if (props.color === 1) return 'black';
     return 'grey';

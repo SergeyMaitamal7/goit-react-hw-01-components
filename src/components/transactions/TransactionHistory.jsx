@@ -1,26 +1,52 @@
 import PropTypes from 'prop-types';
-import { UpperCase } from 'components/statistics/StatisticsList';
-import { Transaction } from './Transaction';
-import { TransactionTable } from './TransactionHistory.styled';
-import { TransactionTitle } from './TransitionsTitle';
+import {
+  TransactionTable,
+  HeaderTable,
+  ThTable,
+  TrTable,
+  TransactionElements,
+  TransactionAllElements,
+  TransactionBody,
+} from './TransactionHistory.styled';
+import { ucFirst } from 'components/profile/Profile.stiled';
 export const TransactionHistory = ({ transactions }) => {
   return (
     <TransactionTable>
-      <TransactionTitle
-        tipeT={UpperCase('Tipe')}
-        amountT={UpperCase('Amount')}
-        currencyT={UpperCase('Currency')}
-      />
-      {transactions.map(transaction => (
-        <Transaction key={transaction.id} transaction={transaction} />
-      ))}
+      <HeaderTable>
+        <TrTable>
+          <ThTable>Tipe</ThTable>
+          <ThTable>Amount</ThTable>
+          <ThTable>Currency</ThTable>
+        </TrTable>
+      </HeaderTable>
+    
+      <TransactionBody>
+        {transactions.map(({ id, type, amount, currency }, idx) => (
+          <TransactionAllElements key={id} string={idx + 1}>
+            <TransactionElements>{ucFirst(type)}</TransactionElements>
+            <TransactionElements>{amount}</TransactionElements>
+            <TransactionElements>{currency}</TransactionElements>
+          </TransactionAllElements>
+        ))}
+      </TransactionBody>
     </TransactionTable>
   );
 };
 
 TransactionHistory.propTypes = {
-  id: PropTypes.string.isRequired,
-  typeT: PropTypes.string.isRequired,
-  amountT: PropTypes.string.isRequired,
-  currencyT: PropTypes.string.isRequired,
-};
+  transactions: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
+    })
+  )};
+
+
+// TransactionHistory.propTypes = {
+//   id: PropTypes.string.isRequired,
+//   typeT: PropTypes.string.isRequired,
+//   amountT: PropTypes.string.isRequired,
+//   currencyT: PropTypes.string.isRequired,
+// };
