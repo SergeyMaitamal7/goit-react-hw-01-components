@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
-export const ProfileContainer = styled.div`
-`;
+export const ProfileContainer = styled.div``;
 export const Description = styled.div`
   display: block;
   width: 480px;

@@ -8,7 +8,7 @@ import {
   TransactionAllElements,
   TransactionBody,
 } from './TransactionHistory.styled';
-import { ucFirst } from 'components/Profile/Profile.stiled';
+import { ucFirst } from 'components/ProfileUser/ProfileUser.stiled';
 export const TransactionHistory = ({ transactions }) => {
   return (
     <TransactionTable>

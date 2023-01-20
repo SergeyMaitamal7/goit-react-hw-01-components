@@ -5,9 +5,9 @@ import {
   List,
   Item,
   StatFileTipe,
-} from './Statistics.styled';
+} from './Statisticslist.styled';
 
-export const Statistics = ({ title, statistics }) => (
+export const StatisticsList = ({ title, statistics }) => (
   <Section>
     <PageTitle>{title}</PageTitle>
     <List>
@@ -21,7 +21,7 @@ export const Statistics = ({ title, statistics }) => (
   </Section>
 );
 
-Statistics.propTypes = {
+StatisticsList.propTypes = {
   title: PropTypes.string,
   statistic: PropTypes.arrayOf(
     PropTypes.shape({
@@ -31,4 +31,3 @@ Statistics.propTypes = {
     })
   ).isRequired,
 };
-

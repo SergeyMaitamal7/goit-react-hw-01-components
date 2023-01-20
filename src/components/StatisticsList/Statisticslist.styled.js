@@ -13,7 +13,7 @@ export const PageTitle = styled.h2`
   background-color: aqua;
   margin: 0;
   margin-top: 20px;
-  padding-top:20px;
+  padding-top: 20px;
   padding-bottom: 20px;
   color: black;
 `;
@@ -39,10 +39,10 @@ export const StatFileTipe = styled.span`
   align-items: center;
   text-align: center;
   padding: 10px;
-  padding-bottom:${props => {
+  padding-bottom: ${props => {
     if (props.fontSize === 24) return '20px';
     return '10px';
-  }}; ; ;
+  }};
   font-size: ${props => {
     if (props.fontSize === 24) return '24px';
     return '16px';
