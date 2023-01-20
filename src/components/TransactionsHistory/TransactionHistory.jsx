@@ -8,7 +8,7 @@ import {
   TransactionAllElements,
   TransactionBody,
 } from './TransactionHistory.styled';
-import { ucFirst } from 'components/profile/Profile.stiled';
+import { ucFirst } from 'components/Profile/Profile.stiled';
 export const TransactionHistory = ({ transactions }) => {
   return (
     <TransactionTable>
@@ -19,7 +19,7 @@ export const TransactionHistory = ({ transactions }) => {
           <ThTable>Currency</ThTable>
         </TrTable>
       </HeaderTable>
-    
+
       <TransactionBody>
         {transactions.map(({ id, type, amount, currency }, idx) => (
           <TransactionAllElements key={id} string={idx + 1}>
@@ -41,8 +41,8 @@ TransactionHistory.propTypes = {
       amount: PropTypes.string.isRequired,
       currency: PropTypes.string.isRequired,
     })
-  )};
-
+  ),
+};
 
 // TransactionHistory.propTypes = {
 //   id: PropTypes.string.isRequired,

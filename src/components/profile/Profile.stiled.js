@@ -7,6 +7,7 @@ export const Description = styled.div`
   width: 480px;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 10px;
   padding-bottom: 10px;
   border: 1px solid gray;
   background-color: aqua;

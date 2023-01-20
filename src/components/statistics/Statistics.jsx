@@ -1,24 +1,60 @@
 import PropTypes from 'prop-types';
-import { Item, StatFileTipe } from './Statistics.styled';
-export const Statistics = ({ statistic: { label, percentage } }) => {
-  return (
-    <Item>
-      <StatFileTipe> {label} </StatFileTipe>
-      <StatFileTipe fontSize={24}> {percentage} </StatFileTipe>
-    </Item>
-  );
-};
+import {
+  Section,
+  PageTitle,
+  List,
+  Item,
+  StatFileTipe,
+} from './Statistics.styled';
+
+export const Statistics = ({ title, statistics }) => (
+  <Section>
+    <PageTitle>{title}</PageTitle>
+    <List>
+      {statistics.map(statistic => (
+        <Item key={statistic.id}>
+          <StatFileTipe>{statistic.label}</StatFileTipe>
+          <StatFileTipe fontSize={24}>{statistic.percentage}%</StatFileTipe>
+        </Item>
+      ))}
+    </List>
+  </Section>
+);
 
 Statistics.propTypes = {
-  statistic: PropTypes.exact({
-    id: PropTypes.string.isRequired,
-    label: PropTypes.string.isRequired,
-    percentage: PropTypes.number.isRequired,
-  }).isRequired,
+  title: PropTypes.string,
+  statistic: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ).isRequired,
 };
 
-export function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215)
-    .toString(16)
-    .padStart(6, 0)}`;
-}
+// import { PageTitle } from './StatisticsPageTitle';
+// import { List, Section, Item, StatFileTipe } from './StatisticsList.styled';
+// import { UpperCase } from './StatisticsList.styled';
+// export const StatisticsList = statistics => {
+//   return (
+//     <Section>
+//       <PageTitle text={UpperCase('Upload stats')} />
+//       <List>
+//         {statistics.map(statistic => (
+//           <Item key={statistic.id}>
+//             <StatFileTipe> {statistic.label} </StatFileTipe>
+//             <StatFileTipe fontSize={24}> {statistic.percentage} </StatFileTipe>
+//           </Item>
+//         ))}
+//       </List>
+//     </Section>
+//   );
+// };
+
+// StatisticsList.propTypes = {
+//   statistics: PropTypes.arrayOf(
+//     PropTypes.shape({
+//       id: PropTypes.string.isRequired,
+//     })
+//   ).isRequired,
+// };
