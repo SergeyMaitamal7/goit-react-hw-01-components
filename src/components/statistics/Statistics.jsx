@@ -32,29 +32,3 @@ Statistics.propTypes = {
   ).isRequired,
 };
 
-// import { PageTitle } from './StatisticsPageTitle';
-// import { List, Section, Item, StatFileTipe } from './StatisticsList.styled';
-// import { UpperCase } from './StatisticsList.styled';
-// export const StatisticsList = statistics => {
-//   return (
-//     <Section>
-//       <PageTitle text={UpperCase('Upload stats')} />
-//       <List>
-//         {statistics.map(statistic => (
-//           <Item key={statistic.id}>
-//             <StatFileTipe> {statistic.label} </StatFileTipe>
-//             <StatFileTipe fontSize={24}> {statistic.percentage} </StatFileTipe>
-//           </Item>
-//         ))}
-//       </List>
-//     </Section>
-//   );
-// };
-
-// StatisticsList.propTypes = {
-//   statistics: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       id: PropTypes.string.isRequired,
-//     })
-//   ).isRequired,
-// };
